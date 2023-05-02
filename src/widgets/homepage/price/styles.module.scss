@@ -1,0 +1,34 @@
+.priceContainer {
+  display: flex;
+  gap: 32px;
+  flex-direction: column;
+  align-items: center;
+  padding: 128px 0;
+  background-image: url('../../../assets/price-section-background.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  text-align: center;
+  
+  h1 {
+    align-items: center;
+  }
+
+  .price {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+
+    span {
+      color: rgb(255, 152, 16);
+    }
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 1.5;
+    width: 100%;
+    max-width: 640px;
+    color: #8C8C8C;
+    margin-bottom: 32px;
+  }
+}
