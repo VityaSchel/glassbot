@@ -1,0 +1,18 @@
+.header {
+  width: 100%;
+  max-width: var(--max-width);
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    span {
+      font-family: 'Gilroy';
+      font-display: 'block';
+      font-weight: 600;
+      color: #000;
+      font-size: 20px;
+    }
+  }
+}
