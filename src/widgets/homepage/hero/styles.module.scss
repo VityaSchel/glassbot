@@ -1,8 +1,15 @@
+@use '@/shared/styles/variables.scss' as variables;
+
 .container {
   display: flex;
   flex-direction: row;
   gap: 6vw;
   padding-top: 128px;
+
+  @media screen and (max-width: variables.$breakpoint-tablet) {
+    flex-direction: column-reverse;
+    padding-top: 64px;
+  }
 
   .info {
     display: flex;

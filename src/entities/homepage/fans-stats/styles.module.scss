@@ -2,9 +2,9 @@
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 2px 0px;
   text-align: center;
   background-color: white;
-  $width: 382.8px;
-  width: $width;
-  min-width: $width;
+  width: 382.8px;
+  flex-shrink: 0;
+  max-width: 100%;
   padding: 48px;
   border-radius: 24px;
   display: flex;

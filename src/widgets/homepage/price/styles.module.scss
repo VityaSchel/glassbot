@@ -1,3 +1,5 @@
+@use '@/shared/styles/variables.scss' as variables;
+
 .priceContainer {
   display: flex;
   gap: 32px;
@@ -8,6 +10,11 @@
   background-repeat: no-repeat;
   background-position: top center;
   text-align: center;
+
+  @media screen and (max-width: variables.$breakpoint-tablet) {
+    padding: 64px 0;
+    gap: 24px;
+  }
   
   h1 {
     align-items: center;
@@ -17,6 +24,10 @@
     font-family: 'Gilroy', sans-serif;
     font-size: 18px;
     font-weight: 400;
+
+    @media screen and (max-width: variables.$breakpoint-tablet) {
+      font-size: 16px;
+    }
 
     span {
       color: rgb(255, 152, 16);
@@ -30,5 +41,10 @@
     max-width: 640px;
     color: #8C8C8C;
     margin-bottom: 32px;
+
+    @media screen and (max-width: variables.$breakpoint-tablet) {
+      font-size: 8px;
+      margin-bottom: 8px;
+    }
   }
 }

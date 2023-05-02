@@ -1,3 +1,5 @@
+@use '@/shared/styles/variables.scss' as variables;
+
 .wrapper {
   max-width: var(--max-width);
   width: 100%;
