@@ -1,7 +1,7 @@
 import styles from './styles.module.scss'
 import Link from 'next/link'
 import { Button } from '@/shared/ui/button'
-import { HeroFans } from '@/entity/homepage/fans'
+import { HeroFans } from '@/entities/homepage/fans-persons'
 
 export function HeroSection() {
   return (

@@ -1,4 +1,4 @@
-import { FanPerson } from '@/entity/homepage/fans/fan'
+import { FanPerson } from '@/entities/homepage/fans-persons/fan'
 import styles from './styles.module.scss'
 import Person1 from '@/assets/fans/person1.png'
 import Person2 from '@/assets/fans/person2.png'

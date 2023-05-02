@@ -1,0 +1,22 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  background-image: url('../../../assets/about-section-background.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding-top: 128px;
+
+  .content {
+    display: flex;
+    gap: 64px;
+
+    .info {
+
+      p {
+        font-size: 18px;
+        line-height: 2;
+        margin: 32px 0;
+      }
+    }
+  }
+}
