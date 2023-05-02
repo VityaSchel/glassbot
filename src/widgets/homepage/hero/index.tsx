@@ -1,7 +1,6 @@
 import styles from './styles.module.scss'
-import Link from 'next/link'
-import { Button } from '@/shared/ui/button'
 import { HeroFans } from '@/entities/homepage/fans-persons'
+import { SubscribeButton } from '@/features/subscribe-button'
 
 export function HeroSection() {
   return (
@@ -10,9 +9,7 @@ export function HeroSection() {
       <div className={styles.info}>
         <h1>Glassbot</h1>
         <p>Наш бот позволяет искать заинтересованных посетителей страницы ВКонтакте. Уникальная система анализа бота ищет самых активных пользователей, кто посещает страницу и взаимодействует с ней.</p>
-        <Link href={process.env.LINK + ''} className={styles.button}>
-          <Button>Подписаться</Button>
-        </Link>
+        <SubscribeButton />
       </div>
     </section>
   )
