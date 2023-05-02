@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 6vw;
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    h1 {
+      font-size: 48px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 2;
+    }
+
+    .button {
+      display: block;
+      width: fit-content;
+      border-radius: 999px;
+    }
+  }
+}

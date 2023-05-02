@@ -6,11 +6,14 @@ import Person3 from '@/assets/fans/person3.png'
 
 export function HeroFans() {
   return (
-    <div className={styles.fans}>
-      <FanPerson place={1} photo={Person1} />
-      <br></br>
-      <FanPerson place={2} photo={Person2} />
-      <FanPerson place={3} photo={Person3} />
+    <div className={styles.fansContainer}>
+      <span className={styles.fans}>Поклонники за <span>7 дней</span></span>
+      <div>
+        <FanPerson place={1} photo={Person1} />
+        <br></br>
+        <FanPerson place={2} photo={Person2} />
+        <FanPerson place={3} photo={Person3} />
+      </div>
     </div>
   )
 }

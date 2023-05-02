@@ -1,10 +1,15 @@
-.fans {
+@use 'sass:color';
+
+.fansContainer {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  $width: 382px;
+  width: $width;
+  min-width: $width;
 
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 2px 0px;
-  background-image: url('@/assets/fans/background.svg');
+  background-image: url('../../../assets/fans/background.svg');
   background-repeat: no-repeat;
   background-position: top 128px center;
   text-align: center;
@@ -12,7 +17,39 @@
   padding: 48px;
   border-radius: 24px;
 
+  .fans {
+    display: block;
+    font-size: 16px;
+
+    span {
+      $color: rgb(255, 152, 16);
+      border: 1px solid $color;
+      color: color.scale($color, $lightness: -10%);
+      display: inline-block;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 99px;
+      padding: 0 12px;
+      margin-left: 6px;
+    }
+  }
+
   .person {
     margin: 12px;
+    display: inline-block;
+    position: relative;
+
+    img {
+      border-radius: 99px;
+    }
+
+    .place {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background-color: white;
+      padding: (32px-24px)/2;
+      box-shadow: 0 3px 3px rgba(0,0,0,.1);
+    }
   }
 }

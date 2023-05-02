@@ -1,3 +1,32 @@
+@use 'sass:color';
+
+$color1: rgb(255, 152, 16);
+$color2: rgb(255, 131, 0);
+$color3: color.scale($color1, $lightness: -20%);
+$color4: color.scale($color2, $lightness: -30%);
+
 .button {
+  display: flex;
+  align-items: center;
+  padding: 0 48px;
+  height: 96px;
+  background: linear-gradient(to bottom, $color1, $color2, $color3, $color4);
+  background-position: 0% 0%;
+  transition: background-position 120ms;
+  background-size: 100% 200%;
+  box-shadow: rgb(255, 206, 135) 0px 15px 50px -10px;
+  border: none;
+  border-radius: 96px;
+  cursor: pointer;
   
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: white;
+
+  &:hover {
+    background-position: 0% 100%;
+  }
 }
