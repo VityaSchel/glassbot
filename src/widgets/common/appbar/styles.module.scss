@@ -2,6 +2,7 @@
   width: 100%;
   max-width: var(--max-width);
   height: 80px;
+  flex-shrink: 0;
 
   nav {
     height: 100%;

@@ -6,6 +6,7 @@ import { GetServerSidePropsContext, GetServerSidePropsResult } from 'next'
 import { getPaymentPageProps, makeRedirect } from '@/shared/utils'
 import { useRouter } from 'next/router'
 import { PaymentForm } from '@/widgets/payment/form'
+import { Footer } from '@/widgets/common/footer'
 
 export type PaymentPageProps = Awaited<ReturnType<typeof getPaymentPageProps>>
 
@@ -28,6 +29,7 @@ export default function PaymentPage(props: PaymentPageProps) {
         showCheckboxes={showCheckboxes}
         paymentUUID={paymentUUID}
       />
+      <Footer />
     </PageWrapper>
   )
 }
