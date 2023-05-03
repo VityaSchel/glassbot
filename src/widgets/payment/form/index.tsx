@@ -56,7 +56,7 @@ export function PaymentForm({ paymentProps, showCheckboxes, paymentUUID }: {
             throw new Error(await payResponse.text())
           }
           const result = await payResponse.json()
-          widget.charge(result.cloudpayments, () => alert('Успешно оплачено!'), () => alert('Ошибка!'))
+          widget.charge(result.cloudpayments, () => alert('Успешно оплачено!'), console.error)
         }}
         innerRef={formikRef as any}
       >
