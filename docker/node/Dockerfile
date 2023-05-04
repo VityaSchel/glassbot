@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM node:16.13.0-alpine as install
+FROM node:16.14.0-alpine as install
 
 ARG NPM_TOKEN
 
