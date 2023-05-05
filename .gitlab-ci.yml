@@ -126,9 +126,9 @@ build_lovebotclick:
     NEXT_PUBLIC_USER_AGREEMENT: https://docs.google.com/document/d/1wUCaCHZGo42OHUtUZcL2e1y80lrDDIext-Qs7N5UFZw/edit?usp=sharing
     NEXT_PUBLIC_BOT_LINK: https://vk.me/public219803842
     NEXT_PUBLIC_TEXT_SECOND_CHECKBOX: Нажимая кнопку “Оплатить” Вы оплачиваете 29₽ и подтверждаете ознакомление с автоматическими списаниями. Через 24 часа, будет совершено автоматическое продление за 889 р. на 3 дня, либо 589 руб. на 2 дня или 289 руб. за 1 день.
-    NEXT_PUBLIC_COMPANY_NAME: ИП Рякин Егор Андреевич
-    NEXT_PUBLIC_COMPANY_INN: 471910121614
-    NEXT_PUBLIC_COMPANY_OGRNIP: 323470400012068
+    NEXT_PUBLIC_COMPANY_NAME: ИП Анучкин Антон Сергеевич
+    NEXT_PUBLIC_COMPANY_INN: 781309696603
+    NEXT_PUBLIC_COMPANY_OGRNIP: 323784700101797
 
 deploy_production_lovebotclick:
   extends: .deploy_production_template

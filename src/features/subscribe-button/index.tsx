@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export function SubscribeButton() {
   return (
-    <Link href={process.env.NEXT_PUBLIC_LINK + ''}>
+    <Link href={process.env.NEXT_PUBLIC_BOT_LINK + ''}>
       <Button>Подписаться</Button>
     </Link>
   )
