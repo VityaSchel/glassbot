@@ -130,8 +130,28 @@ build_lovebotclick:
     NEXT_PUBLIC_COMPANY_INN: 781309696603
     NEXT_PUBLIC_COMPANY_OGRNIP: 323784700101797
 
+build_loverbotshop:
+  extends: .build_production_template
+  variables:
+    PROJECT_NAME: loverbotshop
+    NEXT_PUBLIC_BACKEND_URL: https://api.spy-bot.pro
+    NEXT_PUBLIC_DATA_POLICY: https://docs.google.com/document/d/11ntwB7fqvLM1RYB1-W0y4046AkH3e8qhNb3qyWWETo8/edit?usp=sharing
+    NEXT_PUBLIC_TARIFFS: https://cdn-lovebot.x5.money/tariffs.pdf
+    NEXT_PUBLIC_USER_AGREEMENT: https://docs.google.com/document/d/1wUCaCHZGo42OHUtUZcL2e1y80lrDDIext-Qs7N5UFZw/edit?usp=sharing
+    NEXT_PUBLIC_BOT_LINK: https://t.me/megaspy_bot
+    NEXT_PUBLIC_TEXT_SECOND_CHECKBOX: Нажимая кнопку “Оплатить” Вы оплачиваете 29₽ и подтверждаете ознакомление с автоматическими списаниями. Через 24 часа, будет совершено автоматическое продление за 889 р. на 3 дня, либо 589 руб. на 2 дня или 289 руб. за 1 день.
+    NEXT_PUBLIC_COMPANY_NAME: ИП Анучкин Антон Сергеевич
+    NEXT_PUBLIC_COMPANY_INN: 781309696603
+    NEXT_PUBLIC_COMPANY_OGRNIP: 323784700101797
+
 deploy_production_lovebotclick:
   extends: .deploy_production_template
   variables:
     PROJECT_NAME: lovebotclick
     VIRTUAL_HOST: lovebot.click
+
+deploy_production_loverbotshop:
+  extends: .deploy_production_template
+  variables:
+    PROJECT_NAME: loverbotshop
+    VIRTUAL_HOST: loverbot.shop
