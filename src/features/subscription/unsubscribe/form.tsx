@@ -29,7 +29,7 @@ export function Form() {
             lastNumbers: values.last4digits
           })
         })
-          .then(() => alert('Вы успешно отписались'))
+          .then((status) => status.status === 200 ? alert('Вы успешно отписались') : alert('Ошибка!'))
           .catch(() => alert('Ошибка!'))
       }}
     >
