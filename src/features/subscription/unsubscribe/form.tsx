@@ -21,16 +21,16 @@ export function Form() {
       validateOnChange={true}
       validateOnMount={false}
       onSubmit={(values) => {
-        fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/subscriptions/unsubscribe`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            firstNumbers: values.first6digits,
-            lastNumbers: values.last4digits
-          })
-        })
-          .then((status) => status.status === 200 ? alert('Вы успешно отписались') : alert('Ошибка!'))
-          .catch(() => alert('Ошибка!'))
+        // fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/subscriptions/unsubscribe`, {
+        //   method: 'POST',
+        //   headers: { 'Content-Type': 'application/json' },
+        //   body: JSON.stringify({
+        //     firstNumbers: values.first6digits,
+        //     lastNumbers: values.last4digits
+        //   })
+        // })
+        //   .then((status) => status.status === 200 ? alert('Вы успешно отписались') : alert('Ошибка!'))
+        //   .catch(() => alert('Ошибка!'))
       }}
     >
       {({ values, errors, handleChange, handleSubmit }) => (

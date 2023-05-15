@@ -23,14 +23,14 @@ export function makeRedirect(path: string, params: { [key: string]: any }, metho
 export async function getPaymentPageProps(context: GetServerSidePropsContext): Promise<{ amount: number, amountWithoutDiscount: number, status: string, deactivated: boolean }> {
   const paymentUUID = context.params?.paymentUUID
 
-  if (process.env.DEBUG_API === 'true') {
-    return {
-      amount: 1,
-      amountWithoutDiscount: 690,
-      status: 'activated',
-      deactivated: false
-    }
+  // if (process.env.DEBUG_API === 'true') {
+  return {
+    amount: 1,
+    amountWithoutDiscount: 690,
+    status: 'activated',
+    deactivated: false
   }
+  // }
 
   const paymentDetailsRequest = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/payments/${paymentUUID}`)
   if (paymentDetailsRequest.status !== 200) {

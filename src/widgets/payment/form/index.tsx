@@ -37,26 +37,26 @@ export function PaymentForm({ paymentProps, showCheckboxes, paymentUUID }: {
         validateOnChange={false}
         validateOnMount={false}
         onSubmit={async (values) => {
-          const emailResponse = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/payments/${paymentUUID}/set-email`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              email: values.email
-            })
-          })
-          if (emailResponse.status !== 200) {
-            alert('Ошибка')
-            throw new Error(await emailResponse.text())
-          }
+          // const emailResponse = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/payments/${paymentUUID}/set-email`, {
+          //   method: 'POST',
+          //   headers: { 'Content-Type': 'application/json' },
+          //   body: JSON.stringify({
+          //     email: values.email
+          //   })
+          // })
+          // if (emailResponse.status !== 200) {
+          //   alert('Ошибка')
+          //   throw new Error(await emailResponse.text())
+          // }
 
-          const widget = new cp.CloudPayments()
-          const payResponse = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/payments/${paymentUUID}/pay`)
-          if (payResponse.status !== 200) {
-            alert('Ошибка')
-            throw new Error(await payResponse.text())
-          }
-          const result = await payResponse.json()
-          widget.charge(result.cloudpayments, () => alert('Успешно оплачено!'), console.error)
+          // const widget = new cp.CloudPayments()
+          // const payResponse = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/payments/${paymentUUID}/pay`)
+          // if (payResponse.status !== 200) {
+          //   alert('Ошибка')
+          //   throw new Error(await payResponse.text())
+          // }
+          // const result = await payResponse.json()
+          // widget.charge(result.cloudpayments, () => alert('Успешно оплачено!'), console.error)
         }}
         innerRef={formikRef as any}
       >
