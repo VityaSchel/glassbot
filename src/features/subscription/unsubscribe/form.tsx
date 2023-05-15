@@ -3,6 +3,7 @@ import { Formik } from 'formik'
 import { Button } from '@/shared/ui/button'
 import * as Yup from 'yup'
 import Input from '@/shared/ui/input'
+import Link from 'next/link'
 
 export function Form() {
   return (
@@ -21,6 +22,8 @@ export function Form() {
       validateOnMount={false}
       onSubmit={(values) => {
         fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/subscriptions/unsubscribe`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             firstNumbers: values.first6digits,
             lastNumbers: values.last4digits
@@ -51,8 +54,8 @@ export function Form() {
             inputProps={{ maxLength: 4 }}
           />
           <div className={styles.actions}>
-            <Button type='button'>Я передумал</Button>
-            <Button variant='text' type='submit'>Отписаться</Button>
+            <Link href='/'><Button type='button'>Я передумал</Button></Link>
+            <Button variant='text' type='submit' onClick={() => handleSubmit()}>Отписаться</Button>
           </div>
         </form>
       )}
